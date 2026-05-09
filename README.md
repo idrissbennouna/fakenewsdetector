@@ -201,5 +201,4 @@ python -m fakenewsdetector.pipeline.gold_layer
 
 ---
 
-## Contact
-Pour toute question sur le projet, modifiez ce README ou contactez l'auteur du dépôt.
+
