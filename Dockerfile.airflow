@@ -1,0 +1,18 @@
+FROM apache/airflow:2.8.0
+USER root
+RUN apt-get update && apt-get install -y gcc g++ build-essential && apt-get clean
+COPY airflow-entrypoint.sh /entrypoint-custom.sh
+RUN chmod +x /entrypoint-custom.sh
+USER airflow
+RUN pip install --no-cache-dir \
+    kafka-python \
+    minio \
+    psycopg2-binary \
+    requests \
+    lxml \
+    langdetect \
+    feedparser \
+    beautifulsoup4 \
+    scikit-learn \
+    numpy
+ENTRYPOINT ["/entrypoint-custom.sh"]

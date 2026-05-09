@@ -1,0 +1,13 @@
+requests
+beautifulsoup4
+langdetect
+feedparser
+kafka-python
+boto3
+numpy
+spacy
+scikit-learn
+pandas
+great-expectations
+pyspark==3.4.0
+apache-airflow
